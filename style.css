@@ -5,6 +5,19 @@
 
 }
 
+#search-btn {
+  background-color: rgb(69, 111, 232);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  padding: 0 20px;
+  
+}
+
 .header-container {
   display: flex;
   justify-content: space-around;
@@ -17,9 +30,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 3rem;
   padding: 0 20px;
   height: 60px;
   background-color: whitesmoke;
+}
+
+.navbar a {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .navbar ul {
@@ -75,6 +96,7 @@
 
 .item .item__add {
   background-color: rgb(69, 111, 232);
+  color: white;
   border: 0;
   cursor: pointer;
   margin: 0;
