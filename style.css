@@ -69,6 +69,13 @@
   width: 100%;
 }
 
+.item__price {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
 .item .item__add {
   background-color: rgb(69, 111, 232);
   color: white;
