@@ -83,11 +83,12 @@ function createCustomElement(element, className, innerText) {
   return e;
 }
 
-function createProductItemElement({ sku, name, image }) {
+function createProductItemElement({ sku, name, image, price }) {
   const section = document.createElement('section');
   section.className = 'item';
   section.appendChild(createCustomElement('span', 'item__sku', sku));
   section.appendChild(createCustomElement('span', 'item__title', name));
+  section.appendChild(createCustomElement('span', 'item__price', `$ ${price}`));
   section.appendChild(createProductImageElement(image));
   section.appendChild(createCustomElement('button', 'item__add', 'Adicionar ao carrinho!'));
   return section;
@@ -119,8 +120,9 @@ const createListItems = async (query) => {
     const fetchPromise = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
     const response = await fetchPromise.json();
     const { results } = response;
-    results.forEach(({ id, title, thumbnail }) => {
-      const objectToReturn = { sku: id, name: title, image: thumbnail };
+    console.log(results);
+    results.forEach(({ id, title, thumbnail, price }) => {
+      const objectToReturn = { sku: id, name: title, image: thumbnail, price: price };
       const createElement = createProductItemElement(objectToReturn);
       const getSection = document.querySelector('.items');
       getSection.appendChild(createElement);
