@@ -18,43 +18,18 @@
   
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-around;
+.navbar-nav {
+  padding: 10px;  
   align-items: center;
-  padding: 0.5rem;
-  background-color: whitesmoke;
+  gap: 20px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-  padding: 0 20px;
-  height: 60px;
-  background-color: whitesmoke;
-}
-
-.navbar a {
-  color: rgb(85, 85, 85);
-  text-decoration: none;
-  font-size: 20px;
+.navbar-nav a {
+  color: rgb(69, 111, 232);
+  font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
 }
-
-.navbar ul {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  list-style: none;
-  grid-gap: 20px;
-  justify-items: center;
-  padding: 20px;
-  background-color: whitesmoke;
-}
-
 
 .container {
   display: flex;
